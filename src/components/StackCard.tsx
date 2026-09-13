@@ -1,20 +1,26 @@
 const StackCard = ({ stacks }) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-sm">
-      <div>
-        <figure className="px-10 pt-10">
-          <img src={stacks.icon} alt={`${stacks.name} Icon`} className="w-10" />
+    <div className="card bg-base-100 w-96 shadow-sm z-[-1] ">
+      <div className="flex justify-between items-center pt-8 px-5 mb-4">
+        <figure>
+          <img src={stacks.icon} alt={`${stacks.name} Icon`} className="w-15" />
         </figure>
-        <button className="btn btn-primary">{stacks.badge}</button>
+        <button className="btn ">{stacks.badge}</button>
       </div>
-      <div className="card-body items-center text-center">
-        <h2 className="card-title">Card Title</h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
+      <div className="card-body text-[#64748B]">
+        <h2 className="card-title font-semibold text-2xl mb-5">
+          {stacks.name}
+        </h2>
+        <p>{stacks.description}</p>
+        <div className="flex justify-between mt-6 mb-6">
+          <span className="bg-[#F1F5F9] rounded-sm p-2">{stacks.category}</span>
+          <span>{stacks.difficulty}</span>
+          <span>⭐ {stacks.rating}</span>
+        </div>
         <div className="card-actions">
-          <button className="btn btn-primary">Buy Now</button>
+          <button className="btn bg-[#0A0F1D] text-white w-full">
+            Add to Stack
+          </button>
         </div>
       </div>
     </div>

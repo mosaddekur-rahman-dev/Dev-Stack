@@ -1,6 +1,7 @@
 import { use } from "react";
 import type { IStack } from "../types";
 import AvailableStacks from "./AvailableStack";
+import Aside from "./Aside";
 
 interface StacksProps {
   stacksPromise: Promise<IStack[]>;
@@ -18,15 +19,15 @@ const Stack = ({ stacksPromise }: StacksProps) => {
             Technologies
           </span>
         </h2>
-        <p className="text-[#64748B] text-[18px]">
+        <p className="text-[#64748B] text-[18px] mb-15">
           Pick one technology per category to build your ideal stack.
         </p>
       </div>
       <div className="container mx-auto">
-        <div>
+        <div className="container flex gap-10">
           <AvailableStacks stacks={stacks} />
+          <Aside stacks={stacks} />
         </div>
-        <aside></aside>
       </div>
     </>
   );

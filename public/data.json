@@ -118,35 +118,5 @@
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Containers"
-  },
-  {
-    "id": "github-actions",
-    "name": "GitHub Actions",
-    "category": "DevOps",
-    "description": "A CI/CD automation platform for building, testing, and deploying software directly from GitHub.",
-    "icon": "https://icon.icepanel.io/Technology/svg/GitHub-Actions.svg",
-    "rating": 4.6,
-    "difficulty": "Intermediate",
-    "badge": "CI/CD"
-  },
-  {
-    "id": "git",
-    "name": "Git",
-    "category": "Tools",
-    "description": "A distributed version control system used to track changes and collaborate on software projects.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Git.svg",
-    "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
-  },
-  {
-    "id": "vs-code",
-    "name": "VS Code",
-    "category": "Tools",
-    "description": "A powerful and extensible source-code editor widely used for modern software development.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Visual-Studio-Code.svg",
-    "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Developer Favorite"
   }
 ]
