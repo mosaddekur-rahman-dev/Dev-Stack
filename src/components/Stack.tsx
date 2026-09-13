@@ -1,7 +1,7 @@
-import { use } from "react";
+import { use, useState } from "react";
 import type { IStack } from "../types";
-import AvailableStacks from "./AvailableStack";
 import Aside from "./Aside";
+import AvailableStacks from "./AvailableStack";
 
 interface StacksProps {
   stacksPromise: Promise<IStack[]>;
@@ -9,6 +9,9 @@ interface StacksProps {
 
 const Stack = ({ stacksPromise }: StacksProps) => {
   const stacks = use(stacksPromise);
+
+  const [selectedStack, setSelectedStack] = useState([]);
+  const [removedButton, setRemovedButton] = useState([]);
 
   return (
     <>
@@ -24,9 +27,21 @@ const Stack = ({ stacksPromise }: StacksProps) => {
         </p>
       </div>
       <div className="container mx-auto">
-        <div className="container flex gap-10">
-          <AvailableStacks stacks={stacks} />
-          <Aside stacks={stacks} />
+        <div className="container flex gap-8">
+          <AvailableStacks
+            stacks={stacks}
+            selectedStack={selectedStack}
+            setSelectedStack={setSelectedStack}
+            removedButton={removedButton}
+            setRemovedButton={setRemovedButton}
+          />
+          <Aside
+            stacks={stacks}
+            selectedStack={selectedStack}
+            setSelectedStack={setSelectedStack}
+            removedButton={removedButton}
+            setRemovedButton={setRemovedButton}
+          />
         </div>
       </div>
     </>
