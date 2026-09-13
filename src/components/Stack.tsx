@@ -1,4 +1,14 @@
-const Stack = () => {
+import { use } from "react";
+import type { IStack } from "../types";
+import AvailableStacks from "./AvailableStack";
+
+interface StacksProps {
+  stacksPromise: Promise<IStack[]>;
+}
+
+const Stack = ({ stacksPromise }: StacksProps) => {
+  const stacks = use(stacksPromise);
+
   return (
     <>
       <div className="container mx-auto">
@@ -13,7 +23,9 @@ const Stack = () => {
         </p>
       </div>
       <div className="container mx-auto">
-        <div></div>
+        <div>
+          <AvailableStacks stacks={stacks} />
+        </div>
         <aside></aside>
       </div>
     </>
