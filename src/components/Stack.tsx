@@ -10,8 +10,7 @@ interface StacksProps {
 const Stack = ({ stacksPromise }: StacksProps) => {
   const stacks = use(stacksPromise);
 
-  const [selectedStack, setSelectedStack] = useState([]);
-  const [removedButton, setRemovedButton] = useState([]);
+  const [selectedStack, setSelectedStack] = useState<IStack[]>([]);
 
   return (
     <>
@@ -32,15 +31,10 @@ const Stack = ({ stacksPromise }: StacksProps) => {
             stacks={stacks}
             selectedStack={selectedStack}
             setSelectedStack={setSelectedStack}
-            removedButton={removedButton}
-            setRemovedButton={setRemovedButton}
           />
           <Aside
-            stacks={stacks}
             selectedStack={selectedStack}
             setSelectedStack={setSelectedStack}
-            removedButton={removedButton}
-            setRemovedButton={setRemovedButton}
           />
         </div>
       </div>

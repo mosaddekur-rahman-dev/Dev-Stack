@@ -3,6 +3,7 @@ import Logo from "../assets/logo-text.png";
 const Footer = () => {
   return (
     <div className="container mx-auto mt-20 mb-20">
+      <hr className="text-gray-100 mb-20" />
       <div className="container grid grid-cols-4 gap-30">
         <div className="flex flex-col gap-5">
           <img src={Logo} alt="Dev Stack Logo" className="w-40" />

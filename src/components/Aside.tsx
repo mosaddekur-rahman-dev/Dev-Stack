@@ -1,16 +1,22 @@
+import type { Dispatch, SetStateAction } from "react";
 import { toast } from "react-toastify";
+import type { IStack } from "../types";
 
-const Aside = ({ selectedStack, setSelectedStack }) => {
-  const handleRemoveStack = (stack) => {
-    const restStacks = selectedStack.filter((selectedStack) => {
-      return selectedStack.name !== stack.name;
+interface IAsideProps {
+  selectedStack: IStack[];
+  setSelectedStack: Dispatch<SetStateAction<IStack[]>>;
+}
+
+const Aside = ({ selectedStack, setSelectedStack }: IAsideProps) => {
+  const handleRemoveStack = (stack: IStack) => {
+    const restStacks = selectedStack.filter((item) => {
+      return item.name !== stack.name;
     });
     setSelectedStack(restStacks);
     toast.error("Stack Deleted");
   };
 
-  const handleRemoveStacks = () => {
-    toast.error("Stacks Deleted");
+  const handleRemoveAll = () => {
     setSelectedStack([]);
   };
 
@@ -44,7 +50,7 @@ const Aside = ({ selectedStack, setSelectedStack }) => {
           })}
           <button
             className="w-full mt-7 border border-solid border-pink-400 rounded-2xl py-1"
-            onClick={() => handleRemoveStacks()}>
+            onClick={() => handleRemoveAll()}>
             Remove All
           </button>
         </div>

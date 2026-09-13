@@ -1,7 +1,18 @@
-import { useState } from "react";
+import { useState, type Dispatch, type SetStateAction } from "react";
 import { toast } from "react-toastify";
+import type { IStack } from "../types";
 
-const StackCard = ({ stack, selectedStack, setSelectedStack }) => {
+interface IStackCardProps {
+  stack: IStack;
+  selectedStack: IStack[];
+  setSelectedStack: Dispatch<SetStateAction<IStack[]>>;
+}
+
+const StackCard = ({
+  stack,
+  selectedStack,
+  setSelectedStack,
+}: IStackCardProps) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const handleSelectedStack = () => {
