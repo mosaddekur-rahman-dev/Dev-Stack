@@ -3,15 +3,15 @@ import banner from "../assets/banner-stack.png";
 const Banner = () => {
   return (
     <div className="container mx-auto mb-20">
-      <div className="grid grid-cols-2 items-center gap-26">
-        <div className="flex-col">
+      <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-26">
+        <div className="hidden pt-5 sm:visible sm:block sm:flex-col">
           <div className="mb-8">
             <h1 className="text-5xl font-bold">Build your Ideal</h1>
             <span className="text-5xl font-bold bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent">
               Development Stack
             </span>
           </div>
-          <p className="w-125 mb-12">
+          <p className="w-125 sm:w-100 mb-12 text-[#424c5a]">
             Explore frontend, backend, database, and tooling options, compare
             them side by side, and put together the stack that fits your next
             project.

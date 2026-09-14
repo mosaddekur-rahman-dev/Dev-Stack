@@ -23,7 +23,7 @@ const Aside = ({ selectedStack, setSelectedStack }: IAsideProps) => {
 
   return (
     <div>
-      <div className="w-60  md:visible border border-gray-300 p-5 rounded-2xl">
+      <div className="w-full sm:w-70 border border-gray-300 p-5 rounded-2xl">
         <div>
           <h2 className="font-bold text-2xl mb-3">Your Stack</h2>
           <p className="mb-8">{`${selectedStack.length} Technology Selected`}</p>
@@ -40,7 +40,7 @@ const Aside = ({ selectedStack, setSelectedStack }: IAsideProps) => {
                   className="border border-gray-300 rounded-2xl p-2 mb-2"
                   key={stack.id}>
                   <div className="flex justify-between mb-2">
-                    <div className="flex gap-2">
+                    <div className="flex">
                       <img src={stack.icon} alt="Stack Icon" className="w-10" />
                       <div>
                         <h2>{stack.name}</h2> <p>{stack.category}</p>

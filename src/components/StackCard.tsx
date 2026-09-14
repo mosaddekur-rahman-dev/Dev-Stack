@@ -1,4 +1,5 @@
 import { type Dispatch, type SetStateAction } from "react";
+
 import { toast } from "react-toastify";
 import type { IStack } from "../types";
 
@@ -22,7 +23,7 @@ const StackCard = ({
 
   return (
     <div
-      className={`card bg-base-100  shadow-sm ${isSelected ? "border" : "border-none"} ${isSelected ? "border-solid" : "border-none"} ${isSelected ? "border-pink-200" : "border-none"}`}>
+      className={`card bg-base-100  shadow-sm ${isSelected ? "border-3" : "border-none"} ${isSelected ? "border-solid" : "border-none"} ${isSelected ? "border-pink-200" : "border-none"} mb-5`}>
       <div className="flex justify-between items-center pt-8 px-5 mb-4">
         <figure>
           <img src={stack.icon} alt={`${stack.name} Icon`} className="w-15" />
