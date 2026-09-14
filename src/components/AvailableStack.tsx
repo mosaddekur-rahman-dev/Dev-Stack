@@ -14,7 +14,7 @@ const AvailableStacks = ({
   setSelectedStack,
 }: IAvailableStacksProps) => {
   return (
-    <div className="container mx-auto grid grid-cols-3 gap-8">
+    <div className="container mx-auto grid sm:grid-cols-3 grid-cols-1 sm:shrink gap-8">
       {stacks.map((stack: IStack) => {
         return (
           <StackCard

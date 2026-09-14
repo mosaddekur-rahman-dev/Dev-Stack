@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from "react";
+import { type Dispatch, type SetStateAction } from "react";
 import { toast } from "react-toastify";
 import type { IStack } from "../types";
 
@@ -13,13 +13,13 @@ const StackCard = ({
   selectedStack,
   setSelectedStack,
 }: IStackCardProps) => {
-  const [isSelected, setIsSelected] = useState(false);
+  const isSelected = selectedStack.some((item) => item.id === stack.id);
 
   const handleSelectedStack = () => {
-    setIsSelected(true);
     toast.success("Stack Added");
     setSelectedStack([...selectedStack, stack]);
   };
+
   return (
     <div
       className={`card bg-base-100  shadow-sm ${isSelected ? "border" : "border-none"} ${isSelected ? "border-solid" : "border-none"} ${isSelected ? "border-pink-200" : "border-none"}`}>
@@ -44,7 +44,7 @@ const StackCard = ({
             className={`btn ${isSelected ? "bg-pink-50" : "bg-black"} ${isSelected ? "text-pink-500" : "text-white"} w-full py-5 rounded-lg`}
             onClick={() => handleSelectedStack()}
             disabled={isSelected === true ? true : false}>
-            {isSelected === true ? "Added to Stack" : "Add to Stack"}
+            {isSelected === true ? `☑️Added to Stack` : "Add to Stack"}
           </button>
         </div>
       </div>

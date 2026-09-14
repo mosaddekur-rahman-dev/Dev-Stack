@@ -2,10 +2,10 @@ import Logo from "../assets/logo-text.png";
 
 const Footer = () => {
   return (
-    <div className="container mx-auto mt-20 mb-20">
+    <div className="container mx-auto mt-20 mb-20 pb-2 border-b border-b-gray-300">
       <hr className="text-gray-100 mb-20" />
-      <div className="container grid grid-cols-4 gap-30">
-        <div className="flex flex-col gap-5">
+      <div className="container grid grid-cols-5 gap-30 pb-30">
+        <div className="flex flex-col gap-5 col-span-2">
           <img src={Logo} alt="Dev Stack Logo" className="w-40" />
           <p className="mb-10">
             Curated tools, technologies, and resources for developers building
